@@ -55,6 +55,7 @@ public class JwtFilter extends OncePerRequestFilter {
 
         CustomUserDetails customUserDetails = new CustomUserDetails(user);
         //스프링 시큐리티 인증 토큰 생성
+        // 이미 인증된 사용자에 대한 인증 객체를 담는 것이기 때문에, credentials를 담을 필요없음 => 나중에 각 요청 쓰레드가 SecurityContext를 조회할 일이 있으면 꺼내볼 유저 객체만 할당
         Authentication authentication = new UsernamePasswordAuthenticationToken(customUserDetails, null, customUserDetails.getAuthorities());
         SecurityContextHolder.getContext().setAuthentication(authentication); // 해당 요청 담당 쓰레드가 소유
 
