@@ -124,7 +124,7 @@ addFilterAt(Filter, Class<?>);
 <br>
 
 
-인증-인가 예외 처리의 흐름은 다음과 같습니다.
+인증-인가 예외 처리의 흐름은 다음과 같습니다.<br>
 <img width="300" alt="q" src="https://github.com/user-attachments/assets/f7e6e810-158b-42b8-a774-52fbaba4d7d1" /><br>
 1. `ExceptionTranslationFilter` 의 이전 필터에서 인증을 수행해서 `SecurityContextHodler`에 인증 결과가 담겨있음
 2. `ExceptionTranslationFilter` 는 doFilter호출해서 어플리케이션 흐름 진행
